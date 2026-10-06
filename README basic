@@ -1,0 +1,13 @@
+1.) pygame über die Konsole installieren // pip install pygame
+2.) pygame Bibliothek initialisieren // import pgymae
+3.) Untermodule (z.B. Grafik) laden // pygame.init()
+4.) Variable screen für das Fenster erstellen, Größe mitgeben // screen = pygae.display.set_mode((800,600))
+5.) Hauptfenster und Titel vergeben // pygame.display.set_caption("Fenster")
+6.) boolsche Variable hält Fenster offen // running = True
+7.) Hauptschleife wiederholt Code solange running = True // whle running:
+8.) geht alle Eingabeereignisse seit dem letzten Durchlauf durch // for event in pygame.event.get():
+9.) Event zum beenden des Spiels/Schließen des Fenster z.B. durch "X" // if event == pygame.QUIT():
+10.) wenn Event eintritt dann ist die boolsche Variable False // running = False
+11.) Fenster wird schwarz gefüllt // screen.fill((0,0,0))
+12.) aktualisiert den Bildschirm (in dem Fall schwarz übermalt) durch Double Buffering, aus dem Hintergrund auf den egtl. Bildschirm // pygame.display.flip() 
+13.) beendet das Programm und gibt Ressourcen frei // pygame.QUIT()
