@@ -1,7 +1,7 @@
 # pygame-Projekt
 Dokumentation eines eigenes pygame´s.
 
-Ich möchte die Arbeitsschritte meiens ersten Spiel (Jump´n´Run) in pygame dokumentieren:
+Ich möchte die Arbeitsschritte meines ersten Spiels (Jump´n´Run) in pygame dokumentieren:
 
 I basic: erstellen eines Spielfensters
 
