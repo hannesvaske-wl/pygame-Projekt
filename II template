@@ -7,7 +7,7 @@ def main():
 
     #---------- game loop ----------
     while not quit:
-        window.fill((0,0,0))                            # reset screen
+        window.fill((0,0,0))                           
         #----------- events -----------
         keyspressed = pygame.key.get_pressed()
         for event in pygame.event.get():
@@ -17,7 +17,7 @@ def main():
         #---------- game logic ----------
 
         #---------- update screen ----------
-        pygame.display.update()                         # actually does update
+        pygame.display.update()                         
 
 #---------- initialise & run game -----------
 if __name__ == "__main__":
