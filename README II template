@@ -1,0 +1,19 @@
+1.) importiert Hauptmodul von pygame, die Zeitfunktion und ein Modul für Zufallsberechnungen // import pygame, time, random
+2.) importiert vordefineirte Konstanten zum Benutzen, z.B. QUIT anstatt pygame.QUIT // from pygame.locals import *
+3.) Hauptfunktion erstellen, Container für Spielablauf // def main():
+4.) boolsche Variable für die spätere Spielschleife // quit = False
+5.) solange quit noch False ist (not quit entspricht also True), läuft das Spiel weiter // while not quit:
+6.) löscht Fensterinhalt und zeichnet ihn schwarz // window.fill((0,0,0))
+7.) Zustand aller Tasten werden abgefragt, enthält Tupel mit boolschen Werten für gedrückt/nicht gedrückt, geeignet für dauerhaftes Drücken // keyspressed = pygame.key.get_pressed()
+8.) eine Art Warteschlange für alle Events seit dem letzten Frame, z.B. Tastendruck (einmaliges Drücken) // for event in pygame.event.get():
+9.) prüft ob das Event QUIT ist, also der Button zum Fensterschließen gedrückt wurde // iif event.type == QUIT:
+10.) boolsche Variable wird umgestellt und "while not quit" wird unwahr, Spielschleife bricht ab // quit = True
+11.) zeigt alle Änderungen seit dem letzten Frame und aktualisiert das Fenster ((für bessere Perfomance gegenüber .flip(), da evtl. nicht der gesamte Bildschirm geupdatet werden muss // pygame.display.update()
+12.) Startblock des Skripts, wird nur ausgeführt wenn Datei direkt gestartet wird // if __name__ == "__main__":
+13.) Variablen für Breite und Höhe des Fenster // width, height = 800, 600
+14.) initialisiert alle Pygame Untermodule, z.B. Grafik, Tastatur, ...) // pygame.init()
+15.) Soundmodul für z.B. Hintergrundmusik // pygame.mixer.init()
+16.) erstellt das eigentliche Fenster und wird in Variable window gespeichert // window = pygame.display.set_mode((width, height))
+17.) erzeugt eine Uhr um die FPS zu steuern, ansonsten so schnell wie CPU kann // clock = pygame.tme.Clock()
+18.) ruft main() Funktion auf und das eigentliche Spiel startet, "while not quit"-Schleife beginnt zu laufen // main()
+19.) wird aufgerufen wenn quit = true, beendet das Spiel sauber // pygame.quit()
