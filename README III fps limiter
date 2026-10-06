@@ -1,0 +1,4 @@
+1.) hohe CPU-Belastung das while-Schleife mit Porzessorgeschwindigkeit läuft
+2.) hät das Spiel bei flüssigen 60 FPS // clock = pygame.time.Clock()
+3.) am besten direkt nach dem Erstellen des Fensters setzen
+4.) bindet die 60 FPS an die Uhr/Sekunden (direkt vor pygame.quit()) // clock.tick(60)
