@@ -1,0 +1,30 @@
+import pygame, time, random
+from pygame.locals import *
+
+def main():
+    #---------- game variables ----------
+    quit = False
+
+    #---------- game loop ----------
+    while not quit:
+        window.fill((0,0,0))                            # reset screen
+        #----------- events -----------
+        keyspressed = pygame.key.get_pressed()
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                quit = True
+
+        #---------- game logic ----------
+
+        #---------- update screen ----------
+        pygame.display.update()                         # actually does update
+
+#---------- initialise & run game -----------
+if __name__ == "__main__":
+    width, height = 800, 600
+    pygame.init()
+    pygame.mixer.init()
+    window = pygame.display.set_mode((width, height))
+    clock = pygame.time.Clock()
+    main()
+    pygame.quit()
