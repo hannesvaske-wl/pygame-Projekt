@@ -1,0 +1,5 @@
+1.) Spielerfigur/-variable erstellen in dem Abschnitt "game logic" // player = Rect(x, y, 50, 50) 
+2.) Grundform basiert auf einem Rechteck, Funktion Rect() aus "pygame.locals import *" entnommen
+3.) Koordinaten als Variablen im Block "game variables" festgelegt (für spätere Verwendung) // x = 0 // y = 0
+4.) Größe des Rechtecks festgelegt
+5.) Rechteck auf Fenster-Oberfläche darstellen in Lila, Koordinaten und Größe aus "player"-Variable entnommen (wieder in "game logic" unter der Spielervariable) // pygame.draw.rect(window, (204, 0, 255), player)   
