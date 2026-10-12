@@ -1,0 +1,13 @@
+#----------- horizontal movement -----------
+        if keyspressed[ord('a')]:   
+            x = x - 10             
+
+        if keyspressed[ord('d')]:         
+            x = x + 10
+
+        #----------- vertical movement -----------
+        if keyspressed[ord('w')]:       
+            y = y - 10
+
+        if keyspressed[ord('s')]:       
+            y = y + 10
