@@ -1,0 +1,13 @@
+#---------- upper & lower boundaries -----------
+if y < 0:
+y = 0       
+
+if y >= window.get_height() - 50:  
+    y = window.get_height() - 50 
+
+#---------- left & right boundaries -----------
+if x < 0:
+   x = 0
+
+if x >= window.get_width() - 50:
+    x = window.get_width() - 50
