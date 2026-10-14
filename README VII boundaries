@@ -1,0 +1,7 @@
+1.) direkt untder der Bewegungssteuerung
+2.) if-Bedingungen prüfen die y und x Achsen
+3.) wenn der Spieler noch innerhalb der Grenzen kann der Wert nicht kleiner als 0 sein, bleibt somit am obigen Fensterrand stecken // if y < 0: //  y = 0
+4.) für die untere Grenze bezieht man sich auf die tatsächliche Fenstergröße, window ist im Aufruf der main-Funktion definiert
+5.) es muss die Größe des Spieler abgezogen werden da die Grenze sonst gerade so überschritten wird // if y >= window.get_height() - 50: // y = window.get_height() - 50
+6.) das ganze wird für die x-Achse (den linken und rechten Rand) wiederholt // if x < 0: // x = 0 // if x >= window.get_width() - 50: // x = window.get_width() - 50
+           
