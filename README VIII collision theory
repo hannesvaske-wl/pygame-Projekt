@@ -1,1 +1,17 @@
+kleines Programm um verschiedene Arten von Kollision in pygame darzustellen
+
+1.) Overlapping Coordinates: 
+    - wenn sich zwei Objekte in den x- & y-Kooridnaten gleichen haben wir Kollision
+    - funktioniert gut bei rasterbasierten Spielen, aber nicht bei Runden Objekten
+
+2.) Distance Checking:
+    - kalkuliert die Entfernung zwischen den Mittelpunkten zweier Objekte, dazu wird ein imaginärer Kreis um diese geschlossen
+    - wenn Entfernung <= Radius1 + Radius2 dann haben wir Kollision
+    - d = √((x2 – x1)^2 + (y2 – y1)^2)
+
+3.) Axis Aligned Bounded Box:
+    - Objekt wird durch imaginäre rechteckige Box eingehüllt
+    - prüft Kooridnaten der jeweiligen Boxen
+    - wenn die Koordinaten einer Box die des anderen Objekts berühren haben wir Kollision
+
 
