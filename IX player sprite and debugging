@@ -1,0 +1,74 @@
+import pygame, time, random
+from pygame.locals import *
+
+def main():
+    #---------- game variables ----------
+    quit = False
+
+    x = 145
+    y = 40
+
+    #---------- loading image for standing ----------
+    player_stand = pygame.image.load("Assets for Project 1 game/assets/p3_stand.png").convert_alpha() 
+
+    player_stand = pygame.transform.scale(player_stand, (40, 55)) 
+
+    #---------- game loop ----------
+    while not quit:  
+
+        #----------- events -----------
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                quit = True
+
+        keyspressed = pygame.key.get_pressed() 
+
+        #----------- horizontal movement -----------
+        if keyspressed[ord('a')]:   
+            x = x - 50            
+
+        if keyspressed[ord('d')]:         
+            x = x + 50
+
+        #----------- vertical movement -----------
+        if keyspressed[ord('w')]:       
+            y = y - 50
+
+        if keyspressed[ord('s')]:       
+            y = y + 50
+
+        #---------- upper & lower boundaries -----------
+        if y < 0:
+            y = 0       
+
+        if y >= window.get_height() - 50:  
+            y = window.get_height() - 50 
+
+        #---------- left & right boundaries -----------
+        if x < 0:
+            x = 0
+
+        if x >= window.get_width() - 50:
+            x = window.get_width() - 50
+
+        #---------- game logic ----------
+        #player = Rect(x, y, 50, 50) 
+        #pygame.draw.rect(window, (204, 0, 255), player) 
+            
+        window.fill((0,0,0))
+
+        window.blit(player_stand, (x,y)) 
+
+        #---------- update screen ----------
+        pygame.display.update()  
+        clock.tick(60)      
+
+#---------- initialise & run game -----------
+if __name__ == "__main__":
+    width, height = 800, 600
+    pygame.init()
+    pygame.mixer.init()
+    window = pygame.display.set_mode((width, height))
+    clock = pygame.time.Clock()
+    main()
+    pygame.quit()
