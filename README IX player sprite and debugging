@@ -1,3 +1,12 @@
+Ressourcen für kostenlose Sprites/Sounds oder zum selber erstellen:
+
+https://www.spriters-resource.com/
+http://freesound.org/
+https://www.kenney.nl/assets/platformer-art-deluxe
+https://www.piskelapp.com/p/create/sprite/
+
+
+
 1.) aktuell hat das Rechteck bei schnellen Bewegungen Schlierne gezogen
 2.) die Tastatureingaben für die Steuerung und Bildschirmgrenzen aus der for-Schleife rausholen
 3.) unter den Spielvariablen den Spieler als stehenden Sprite einfügen, Variable erstellen und .png laden, Dateipfad im ornder der spieldatei
