@@ -18,6 +18,10 @@ player_right = [ pygame.transform.scale(image, (50, 70)) for image in player_rig
 
 player_right_frame = 0
 
+player_left = [ pygame.transform.flip(image,True, False) for image in player_right ]
+
+player_left_frame = 0
+
 direction = "stand"
 
 #----------- horizontal movement -----------
@@ -53,6 +57,13 @@ direction = "stand"
 
     if (player_right_frame >= len(player_right)): 
         player_right_frame = 0 
+
+    if direction == "left":
+        window.blit(player_left[player_left_frame], (x,y))
+        player_left_frame = player_left_frame + 1
+
+    if player_left_frame >= len(player_left):
+        player_left_frame = 0
 
     if direction == "stand": 
         window.blit(player_stand, (x,y))
