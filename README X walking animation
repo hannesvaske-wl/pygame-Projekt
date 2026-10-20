@@ -1,1 +1,6 @@
-
+1.) für eine fortlaufende Animation muss eine Reihe von Images geladen werden, die können wir zunächst in einer Liste speichern // player_right = [pygame.image.load("Assets for Project 1 game/assets/p3_walk/PNG/p3_walk01.png").convert_alpha(), ... ]
+2.) auch diese können in ihrer Größe wieder skaliert werden, bei einer Liste bedient man sichd er "list comprehension" // player_right = [ pygame.transform.scale(image, (40, 55)) for image in player_right ]
+3.) hier wird also jedes Bild durchgeladen nach dem DRY (dont repeate yourself) Motto
+4.) der Indextracker wird benötigt um die Positionen in der Liste durchzugehen damit später jedes Bild gerendert wird, Startet bei Indexposition 0 // player_right_frame = 0
+5.) im normalen Zustand bzw. wenn das Spiel gestartet wird befindet sich der Spieler im stehenden Zustand // direction = "stand"
+6.) wir benötigen für verschiedene Bewegungssituationen also Zustandsstrings
