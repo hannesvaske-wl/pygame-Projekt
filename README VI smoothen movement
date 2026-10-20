@@ -1,2 +1,0 @@
-1.) im Block update screen die Uhr aus dem Aufruf der Main-Funktion einbauen // clock.tick(30)
-2.) ruft den game loop 30 mal pro Sekunde auf (FPS), sind ausreichend für ein Standart pygame
