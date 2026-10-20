@@ -15,3 +15,5 @@
 15.) trifft also zu wenn der Index größer ist als die länge die Liste "player_right"
 16.) Zustand für eine rechts Bewegung kann nun gerendert werden
 17.) stehender Zustand wird ähnlich programmiert (allerdings ohne Zähler) // if direction == "stand": // window.blitt(player_stand, (x,y))
+18.) für eine links Bewegung wird jedes Element aus der Liste gespiegelt player_right gespiegelt und in der Liste zur Variable player_left gespeichert // player_left = [ pygame.transform.flip(image,True, False) for image in player_right ]
+19.) das selbe wiedehrolen wir in der "game logic" als Bedingung wenn die direction = "left" um die Images aus der Liste fortlaufend zu rendern und den Zähler wieder zu erhöhen und neu zu starten // if direction == "left": // window.blit(player_left[player_left_frame], (x,y)) // player_left_frame = player_left_frame + 1 // if player_left_frame >= len(player_left): // player_left_frame = 0 
