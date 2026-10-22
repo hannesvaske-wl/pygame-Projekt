@@ -19,8 +19,8 @@ VII boundaries: Bildschirmgrenzen festlegen
 
 VIII collision theory: 3 Varianten von kollision zwischen Objekten
 
-IX player sprites and 
+IX player sprites and debugging: Animation für rechts/links und springen/landen (Schlieren entfernen)
 
-X
+X walking animation
 
 XI
