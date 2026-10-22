@@ -13,13 +13,13 @@ IV player: Spielfigur per Image laden
 
 V movement: Bewegung über wasd 
 
-VI smoothen movement
+VI smoothen movement: FPS an Uhr anpassen
 
-VII
+VII boundaries: Bildschirmgrenzen festlegen
 
-VIII
+VIII collision theory: 3 Varianten von kollision zwischen Objekten
 
-IX
+IX player sprites and 
 
 X
 
