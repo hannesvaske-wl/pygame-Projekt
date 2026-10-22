@@ -8,8 +8,16 @@ https://www.piskelapp.com/p/create/sprite/
 
 
 1.) aktuell hat das Rechteck bei schnellen Bewegungen Schlierne gezogen
+
 2.) die Tastatureingaben für die Steuerung und Bildschirmgrenzen aus der for-Schleife rausholen
-3.) unter den Spielvariablen den Spieler als stehenden Sprite einfügen, Variable erstellen und .png laden, Dateipfad im ornder der spieldatei
-4.) ".convert_alpha()" macht den PNG Hitnergrund transparent // player_stand = pygame.image.load("Assets for Project 1 game/assets/p3_stand.png").convert_alpha()
-5.) das Sprite kann in jeglicher Form skaliert werden über die Pixelangaben // player_stand = pygame.transform.scale(player_stand, (40, 55))
-6.) unter "game logic" die Schwarzzeichnung des Bildschirm verschieben und das rendern der Spielfigur an spezifischen Koordinaten einbauen // window.blit(player_stand, (x,y))
+
+3.) unter den Spielvariablen den Spieler als stehenden Sprite einfügen, Variable erstellen und .png laden, Dateipfad im Ordner der Spieldatei
+
+4.) ".convert_alpha()" macht den PNG Hitnergrund transparent 
+// player_stand = pygame.image.load("Assets for Project 1 game/assets/p3_stand.png").convert_alpha()
+
+5.) das Sprite kann in jeglicher Form skaliert werden über die Pixelangaben 
+// player_stand = pygame.transform.scale(player_stand, (40, 55))
+
+6.) unter "game logic" die Schwarzzeichnung des Bildschirm verschieben und das rendern der Spielfigur an spezifischen Koordinaten einbauen 
+// window.blit(player_stand, (x,y))
