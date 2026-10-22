@@ -8,3 +8,19 @@ I basic: erstellen eines Spielfensters
 II template: Schablone für spätere Logiken
 
 III fps limiter: flüssige Anzahl an Bildern pro Sekunde
+
+IV
+
+V
+
+VI
+
+VII
+
+VIII
+
+IX
+
+X
+
+XI
