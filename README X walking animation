@@ -17,3 +17,8 @@
 17.) stehender Zustand wird ähnlich programmiert (allerdings ohne Zähler) // if direction == "stand": // window.blitt(player_stand, (x,y))
 18.) für eine links Bewegung wird jedes Element aus der Liste gespiegelt player_right gespiegelt und in der Liste zur Variable player_left gespeichert // player_left = [ pygame.transform.flip(image,True, False) for image in player_right ]
 19.) das selbe wiedehrolen wir in der "game logic" als Bedingung wenn die direction = "left" um die Images aus der Liste fortlaufend zu rendern und den Zähler wieder zu erhöhen und neu zu starten // if direction == "left": // window.blit(player_left[player_left_frame], (x,y)) // player_left_frame = player_left_frame + 1 // if player_left_frame >= len(player_left): // player_left_frame = 0 
+20.) für weitere Animationen wie Springen und Landen wieder oben unter dem bereich "list comprehension" die jeweiligen Bilder laden // player_jump = pygame.image.load("Assets for Project 1 game/assets/p3_jump.png").convert_alpha()
+21.) Image wieder in der Größe anpassen // player_land = pygame.transform.scale(player_land, (40, 55)) 
+22.) damit die Figur nicht am Bildschirmrand teilweise verschwindet, die Größenangabe bei den "bounderies" aufs Skaling anpassen // if y >= window.get_height() - 55: // y = window.get_height() - 55 
+23.) in der "game logic" wieder die Zustandsabfragen für "jump" und "landing" abfragen und das Image aktualisieren // elif direction == "jump": // window.blit(player_jump, (x,y))
+24.) da "standing" die Standart Animation ist können wir hier mit "else" arbeiten, der Rest nach "if" folgt als "elif" 
