@@ -1,6 +1,14 @@
-1.) "keyspressed" im Event-Block wartet dauerhaft auf ein Signale/eine Eingabe // keyspressed = pygame.key.get_pressed()
+1.) "keyspressed" im Event-Block wartet dauerhaft auf ein Signale/eine Eingabe 
+// keyspressed = pygame.key.get_pressed()
+
 2.) unter der for-Schleife if-Bedingungen für horizontale und vertikale Bewegung hinzufügen
-3.) wenn a gedrückt wird, ord() ist die Funktion für Ordinalzahlen also vom Buchstaben zu ASCII-Zeichen, so wird die Eingabe über Zahlenwerte verarbeitet // if keyspressed[ord('a')]:
-4.) verringert sich die x-Koordinate des Spielers um 10, entspricht in dem Koordinatensystem einer Bewegung nach Links // x = x - 10
+
+3.) wenn a gedrückt wird, ord() ist die Funktion für Ordinalzahlen also vom Buchstaben zu ASCII-Zeichen, so wird die Eingabe über Zahlenwerte verarbeitet 
+// if keyspressed[ord('a')]:
+
+4.) verringert sich die x-Koordinate des Spielers um 10, entspricht in dem Koordinatensystem einer Bewegung nach Links 
+// x = x - 10
+
 5.) es folgen if-Bedingungen für Bewegungen nach Rechts (x + 10), nach Oben (y - 10) und Unten (y + 10)
+
 6.) aktuell ist die Bewegung noch zu schnell (fps limiter) und das Rechteck verschwidnet außerhalb der Bildschirmgrenzen
