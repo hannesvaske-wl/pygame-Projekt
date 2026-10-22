@@ -16,3 +16,18 @@
 6.) da nun keine Taste mehr für eine Bewegung anch unten benötigt wird, sondern durch Schwerkraft die Figur automatisch zum Boden zurückfällt, wird die Bedingung für die Taste "s" angepasst
 // if keyspressed[ord('s')}:
 // pass
+
+7.) wir benötigen eine Bedingung die prüft ob überhaupt gesprungen wird um diesen umzusetzen, Sprunghöhe hier = 10 Pixel
+// if player_jump_frame > 0:
+// y = y - 10
+// direction == "jump"
+// player_jump_frame = player_jump_frame - 1
+
+8.) so dass die Spielfigur wieder "fällt", verringert sich der Frame um 1
+
+9.) danach wird geprüft ob gelandet wurde oder nicht um das Image anzupassen
+// elif y < y_ground:
+// direction = "landing"
+// y = y + 10
+
+10.) ist die y Koordinate also kleiner als die vom Boden, dann y automatisch um Sprungdistanz eröhehen um Spieler Richtung Boden zu bewegen ohne Tastendruck
