@@ -1,0 +1,37 @@
+#---------- game variables ----------
+quit = False
+
+y_ground = window.get_height() - 100 
+
+x = 145
+y = y_ground  
+
+#---------- list comprehension for scaling  ----------
+player_jump = pygame.image.load("Assets for Project 1 game/assets/p3_jump.png").convert_alpha() 
+player_jump = pygame.transform.scale(player_jump, (40, 55)) 
+player_jump_frame = 0 
+
+#----------- vertical movement -----------
+if keyspressed[ord('w')]:  
+    #y = y - 5
+    #direction = "jump"
+    if y == y_ground:   
+        player_jump_frame = 10 
+
+if keyspressed[ord('s')]:       
+    #y = y + 5
+    #direction = "landing"
+    pass    
+
+if sum(keyspressed) == 0: 
+    direction = "stand" 
+
+if player_jump_frame > 0:
+    y = y - 10 
+    direction == "jump"
+    player_jump_frame = player_jump_frame - 1 
+    #oder: player_jump_frame += player_jump_frame
+
+elif y < y_ground:  
+    direction = "landing" 
+    y = y + 10 
