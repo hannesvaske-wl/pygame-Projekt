@@ -9,11 +9,11 @@ II template: Schablone für spätere Logiken
 
 III fps limiter: flüssige Anzahl an Bildern pro Sekunde
 
-IV
+IV player: Spielfigur per Image laden
 
-V
+V movement: Bewegung über wasd 
 
-VI
+VI smoothen movement
 
 VII
 
