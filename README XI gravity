@@ -1,0 +1,18 @@
+1.) den "game variables" wird der Boden hinzugefügt, dieser liegt auf einer Ebene 100 Pixel weniger als die Bildschirmhöhe
+// y_ground = window.get_height() - 100
+
+2.) die Startkoordinate der Spielfigur liegt nun auf dem Boden
+// y = y_ground
+
+3.) dort wo das Image für´s Springen geladen und skaliert wird, wird noch eine Variable hinzugefügt
+// player_jumo_frame = 0
+
+4.) beim nicht Springen liegt dieser Wert  bei 0
+
+5.) wenn die Taste "w" fürs Springen gedrückt wird brauchen wir eine Bedingung von wo das gestattet ist, da sonst unendlich weiter in der Luft gesprungen werden kann, die frame Variable bildet die Sprunghöhe ab
+// if y == y_ground:
+// player_jump_frame = 10
+
+6.) da nun keine Taste mehr für eine Bewegung anch unten benötigt wird, sondern durch Schwerkraft die Figur automatisch zum Boden zurückfällt, wird die Bedingung für die Taste "s" angepasst
+// if keyspressed[ord('s')}:
+// pass
