@@ -15,12 +15,16 @@ player_right = [
 
  #---------- list comprehension for scaling  ----------
 player_right = [ pygame.transform.scale(image, (50, 70)) for image in player_right ] 
-
 player_right_frame = 0
 
 player_left = [ pygame.transform.flip(image,True, False) for image in player_right ]
-
 player_left_frame = 0
+
+player_jump = pygame.image.load("Assets for Project 1 game/assets/p3_jump.png").convert_alpha() 
+player_jump = pygame.transform.scale(player_jump, (40, 55)) 
+
+player_land = pygame.image.load("Assets for Project 1 game/assets/p3_duck.png").convert_alpha() 
+player_land = pygame.transform.scale(player_land, (40, 55)) 
 
 direction = "stand"
 
@@ -45,6 +49,20 @@ direction = "stand"
     if sum(keyspressed) == 0: 
         direction = "stand" 
 
+#---------- upper & lower boundaries -----------
+        if y < 0:
+            y = 0       
+
+        if y >= window.get_height() - 55:  
+            y = window.get_height() - 55 
+
+        #---------- left & right boundaries -----------
+        if x < 0:
+            x = 0
+
+        if x >= window.get_width() - 55:
+            x = window.get_width() - 55
+
 #---------- game logic ----------
     #player = Rect(x, y, 50, 50) 
     #pygame.draw.rect(window, (204, 0, 255), player) 
@@ -55,15 +73,21 @@ direction = "stand"
         player_right_frame = player_right_frame + 1 
         #kürzere Version als Modulo: player_right_frame = (player_right_frame + 1) % len(player_right) 
 
-    if (player_right_frame >= len(player_right)): 
+    elif (player_right_frame >= len(player_right)): 
         player_right_frame = 0 
 
-    if direction == "left":
+    elif direction == "left":
         window.blit(player_left[player_left_frame], (x,y))
         player_left_frame = player_left_frame + 1
 
-    if player_left_frame >= len(player_left):
+    elif player_left_frame >= len(player_left):
         player_left_frame = 0
 
-    if direction == "stand": 
+    elif direction == "jump":         
+            window.blit(player_jump, (x,y))
+
+    elif direction == "landing":      
+            window.blit(player_land, (x,y))
+
+    else: 
         window.blit(player_stand, (x,y))
