@@ -9,7 +9,7 @@ II template: Schablone für spätere Logiken
 
 III fps limiter: flüssige Anzahl an Bildern pro Sekunde
 
-IV player: Spielfigur per Image laden
+IV player: Spielfigur per Rechteck
 
 V movement: Bewegung über wasd 
 
@@ -17,10 +17,10 @@ VI smoothen movement: FPS an Uhr anpassen
 
 VII boundaries: Bildschirmgrenzen festlegen
 
-VIII collision theory: 3 Varianten von kollision zwischen Objekten
+VIII collision theory: 3 Varianten von Kollision zwischen Objekten
 
-IX player sprites and debugging: Animation für rechts/links und springen/landen (Schlieren entfernen)
+IX player sprites and debugging: Sprite für Spielfigur laden (Schlieren entfernen)
 
-X walking animation
+X walking animation: Animation für rechts/links und springen/landen
 
-XI
+XI gravity: Boden definieren und Sprung von diesem samt zurückfallen
