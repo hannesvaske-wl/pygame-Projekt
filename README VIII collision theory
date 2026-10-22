@@ -16,25 +16,71 @@ C.) Axis Aligned Bounded Box:
 
 __________________________________________________________________________________________
 
-1.) Turtle & Math Bibliothek einbinden // import turtle // import math
-2.) Fenster und Werkzeuge für die Sprites // wn = turtle.Screen() // wn.setup(width=900, height=600)
-3.) direkte Bildschirmausgabe von Turtle ausschalten, Bild erst im Hintergrund vorbereiten und über wn.update() flüssig darstellen // wn.tracer(0)
-4.) Objekt zum Zeichnen der Sprites // pen = turtle.Turtle()
-5.) "versteckt" den Stift // pen.hideturtle()
-6.) Stift wird nach angehoben, bewegt sich fortlaufend zu neuen Koordinaten, damit keine konstante Linie gezogen wird // pen.penup()
-7.) die Formen in turtle werden durch die der gifs ergänzt // wn.addshape("wizard.gif")
-8.) in der OOP ist diese Klasse der Bauplan, welcher Attribute und Methoden für spätere Objekte enthält // class Sprite():
-9.) dieser Konstruktor wird immer aufgerufen wenn ein neues Objekt (z.B. wizard) erstellt wird // def __init__(self, x, y, width, height, image)
+1.) Turtle & Math Bibliothek einbinden 
+// import turtle 
+// import math
+
+2.) Fenster und Werkzeuge für die Sprites 
+// wn = turtle.Screen() 
+// wn.setup(width=900, height=600)
+
+3.) direkte Bildschirmausgabe von Turtle ausschalten, Bild erst im Hintergrund vorbereiten und über wn.update() flüssig darstellen 
+// wn.tracer(0)
+
+4.) Objekt zum Zeichnen der Sprites 
+// pen = turtle.Turtle()
+
+5.) "versteckt" den Stift 
+// pen.hideturtle()
+
+6.) Stift wird nach angehoben, bewegt sich fortlaufend zu neuen Koordinaten, damit keine konstante Linie gezogen wird 
+// pen.penup()
+
+7.) die Formen in turtle werden durch die der gifs ergänzt 
+// wn.addshape("wizard.gif")
+
+8.) in der OOP ist diese Klasse der Bauplan, welcher Attribute und Methoden für spätere Objekte enthält 
+// class Sprite():
+
+9.) dieser Konstruktor wird immer aufgerufen wenn ein neues Objekt (z.B. wizard) erstellt wird 
+// def __init__(self, x, y, width, height, image)
+
 10.) Konstruktor enthält die Werte welche später an die Sprites übergeben werden
-11.) es folgen die Methoden u.a. zum selbstzeichnen der Sprites, der Stift fährt die Koordinaten ab und "stempelt" das Sprite // def render(self, pen)
-12.) Methoden für die Kollisionsarten, self und other können jeweils durch die den entsprechenden Sprite ersetzt werden // def is_overlapping_collision(self, other): ...
-13.) Konstruktoraufruf, Werte werden an die Methode übergbeen, Objekt wizard erhält so eigene Variablen // wizard = Sprite(-128, 200, 128, 128, "wizard.gif")
-14.) Array für die Sprites // sprites = [wizard, goblin, pacman, cherry, bar, ball] 
-15.) Funktion für die Steuerung der jeweiligen Figur und übergibt an die Methode // def move_goblin(): // goblin.x -= 64
-16.) wartet auf Eingaben um die Tastatur mit den Spilebewegungen zu verbinden// wn.listen() 
-17.) definiert  die Bewegungsfunktion zur entsprechenden Taste // wn.onkeypress(move_goblin, "Left")
-18.) Spielsyntax in der Endlosschleife // while True: 
-19.) jedes Element aus der Liste sprites wird variable sprite zugewiesen  for sprite in sprites: // sprite.render(pen)
-20.) prüft Kollisionstyp 1, vergleich zwei Instanzen der selben Klasse z.B. self(wizard) und other (goblin), beim Vergleich wird True oder False ausggegeben // if wizard.is_overlapping_collision(goblin) // wizard.image = "x.gif"
-21.) aktualisiert Bildschirm, siehe Punkt 3.) und für nächsten Durchlauf wieder löschen // wn.update()
-22.) Stift leeren // pen.clear()
+
+11.) es folgen die Methoden u.a. zum selbstzeichnen der Sprites, der Stift fährt die Koordinaten ab und "stempelt" das Sprite 
+// def render(self, pen)
+
+12.) Methoden für die Kollisionsarten, self und other können jeweils durch die den entsprechenden Sprite ersetzt werden 
+// def is_overlapping_collision(self, other): ...
+
+13.) Konstruktoraufruf, Werte werden an die Methode übergbeen, Objekt wizard erhält so eigene Variablen 
+// wizard = Sprite(-128, 200, 128, 128, "wizard.gif")
+
+14.) Array für die Sprites 
+// sprites = [wizard, goblin, pacman, cherry, bar, ball] 
+
+15.) Funktion für die Steuerung der jeweiligen Figur und übergibt an die Methode 
+// def move_goblin(): 
+// goblin.x -= 64
+
+16.) wartet auf Eingaben um die Tastatur mit den Spilebewegungen zu verbinden
+// wn.listen() 
+
+17.) definiert  die Bewegungsfunktion zur entsprechenden Taste 
+// wn.onkeypress(move_goblin, "Left")
+
+18.) Spielsyntax in der Endlosschleife 
+// while True: 
+
+19.) jedes Element aus der Liste sprites wird variable sprite zugewiesen  for sprite in sprites: 
+// sprite.render(pen)
+
+20.) prüft Kollisionstyp 1, vergleich zwei Instanzen der selben Klasse z.B. self(wizard) und other (goblin), beim Vergleich wird True oder False ausggegeben 
+// if wizard.is_overlapping_collision(goblin) 
+// wizard.image = "x.gif"
+
+21.) aktualisiert Bildschirm, siehe Punkt 3.) und für nächsten Durchlauf wieder löschen 
+// wn.update()
+
+22.) Stift leeren 
+// pen.clear()
