@@ -1,21 +1,54 @@
-1.) für eine fortlaufende Animation muss eine Reihe von Images geladen werden, die können wir zunächst in einer Liste speichern // player_right = [pygame.image.load("Assets for Project 1 game/assets/p3_walk/PNG/p3_walk01.png").convert_alpha(), ... ]
-2.) auch diese können in ihrer Größe wieder skaliert werden, bei einer Liste bedient man sichd er "list comprehension" // player_right = [ pygame.transform.scale(image, (40, 55)) for image in player_right ]
+1.) für eine fortlaufende Animation muss eine Reihe von Images geladen werden, die können wir zunächst in einer Liste speichern 
+// player_right = [pygame.image.load("Assets for Project 1 game/assets/p3_walk/PNG/p3_walk01.png").convert_alpha(), ... ]
+
+2.) auch diese können in ihrer Größe wieder skaliert werden, bei einer Liste bedient man sichd er "list comprehension" 
+// player_right = [ pygame.transform.scale(image, (40, 55)) for image in player_right ]
+
 3.) hier wird also jedes Bild durchgeladen nach dem DRY (dont repeate yourself) Motto
-4.) der Indextracker wird benötigt um die Positionen in der Liste durchzugehen damit später jedes Bild gerendert wird, Startet bei Indexposition 0 // player_right_frame = 0
-5.) im normalen Zustand bzw. wenn das Spiel gestartet wird befindet sich der Spieler im stehenden Zustand // direction = "stand"
+
+4.) der Indextracker wird benötigt um die Positionen in der Liste durchzugehen damit später jedes Bild gerendert wird, Startet bei Indexposition 0 
+// player_right_frame = 0
+
+5.) im normalen Zustand bzw. wenn das Spiel gestartet wird befindet sich der Spieler im stehenden Zustand 
+// direction = "stand"
+
 6.) wir benötigen für verschiedene Bewegungssituationen also Zustandsstrings
-7.) zu den if-Bedingungen der jewiels gedrückten Knöpfe fügen wir die Zustände hinzu // direction = "right"
-8.) und eine Prüfung ob überhaupt ein Knopf gedrückt wurde, wenn nicht bleibt das Image "stehend" // if(sum(keyspressed) == 0 // direction = "stand"
+
+7.) zu den if-Bedingungen der jewiels gedrückten Knöpfe fügen wir die Zustände hinzu 
+// direction = "right"
+
+8.) und eine Prüfung ob überhaupt ein Knopf gedrückt wurde, wenn nicht bleibt das Image "stehend" 
+// if(sum(keyspressed) == 0 
+// direction = "stand"
+
 9.) die game logic benötigt nun den Code zum rendern der jeweiligen Zustände
-10.) if-Bedingung für den Zustand // if direction == "right":
-11.) nun wird aus der Liste der Images das entsprechende rausgeholt und an den spielerkoordinaten gerendert // window.blit(player_right[player_right_frame], (x,y))
-12.) der Indextracker muss erhöht werden damit das nächste Image gerendert wird // player_right_frame = player_right_frame + 1
+
+10.) if-Bedingung für den Zustand 
+// if direction == "right":
+
+11.) nun wird aus der Liste der Images das entsprechende rausgeholt und an den spielerkoordinaten gerendert 
+// window.blit(player_right[player_right_frame], (x,y))
+
+12.) der Indextracker muss erhöht werden damit das nächste Image gerendert wird 
+// player_right_frame = player_right_frame + 1
+
 13.) da es nur 11 Images gibt mit den Indexpositionen 0-10 stürzt das Spiel nach dem Erreichen des letzten ab
-14.) benötigen eine Bedingung um den Zähleer zurückzusetzen sobald das öetzte Bild erreicht ist (sozusagen als fortlaufende Schleife) // if (player_right_frame >= len(player_right)): // player_right_frame = 0
+
+14.) benötigen eine Bedingung um den Zähleer zurückzusetzen sobald das öetzte Bild erreicht ist (sozusagen als fortlaufende Schleife) 
+// if (player_right_frame >= len(player_right)): 
+// player_right_frame = 0
+
 15.) trifft also zu wenn der Index größer ist als die länge die Liste "player_right"
+
 16.) Zustand für eine rechts Bewegung kann nun gerendert werden
-17.) stehender Zustand wird ähnlich programmiert (allerdings ohne Zähler) // if direction == "stand": // window.blitt(player_stand, (x,y))
-18.) für eine links Bewegung wird jedes Element aus der Liste gespiegelt player_right gespiegelt und in der Liste zur Variable player_left gespeichert // player_left = [ pygame.transform.flip(image,True, False) for image in player_right ]
+
+17.) stehender Zustand wird ähnlich programmiert (allerdings ohne Zähler) 
+// if direction == "stand": 
+// window.blitt(player_stand, (x,y))
+
+18.) für eine links Bewegung wird jedes Element aus der Liste gespiegelt player_right gespiegelt und in der Liste zur Variable player_left gespeichert 
+// player_left = [ pygame.transform.flip(image,True, False) for image in player_right ]
+
 19.) das selbe wiedehrolen wir in der "game logic" als Bedingung wenn die direction = "left" um die Images aus der Liste fortlaufend zu rendern und den Zähler wieder zu erhöhen und neu zu starten // if direction == "left": // window.blit(player_left[player_left_frame], (x,y)) // player_left_frame = player_left_frame + 1 // if player_left_frame >= len(player_left): // player_left_frame = 0 
 20.) für weitere Animationen wie Springen und Landen wieder oben unter dem bereich "list comprehension" die jeweiligen Bilder laden // player_jump = pygame.image.load("Assets for Project 1 game/assets/p3_jump.png").convert_alpha()
 21.) Image wieder in der Größe anpassen // player_land = pygame.transform.scale(player_land, (40, 55)) 
