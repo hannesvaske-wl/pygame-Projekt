@@ -1,0 +1,13 @@
+1.) Version 1.12.2 von Tiled installieren und online ein Set an Assets/Tiles suchen
+
+2.) Datei -> neues Tileset
+
+3.) im Menüband auf Kacelsatz -> Kacheln hinzufügen und alle ausgwählten Assets einbinden
+
+4.) um Eigenschaften hinzuzufügen alle Tiles markieren und auf das "+" für Eigenschaft hinzufügen drücken
+
+5.) z.B. "ground" als Boolean, so können wir einen Haken für true setzen bei allen objekte die wir als Boden benötigen zum drauf laufen
+
+6.) sinnvolle Ergänzungen sind "climbable" (bool) für Leitern, "health" (integer) für alles was den Lebensbalken beeinflussen kann, "solid" (bool) für alle Objekte die nicht passierbar sind und "points" (integer) für sammelbare Punkte
+
+7.) "provides" und "require" als Strings um Abhängigkeiten zu definieren, z.B. "provides" grünes Schloss & "requires" grüner Schlüssel
